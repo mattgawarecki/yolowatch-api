@@ -14,6 +14,7 @@ var YoloWatch = function(options) {
     getRecent: function(count, callback) {
       if (count === 0) {
         return callback(null, {
+          type: 'recent',
           count: 0,
           tweets: []
         });
@@ -35,6 +36,7 @@ var YoloWatch = function(options) {
           });
 
           var wrapped = {
+            type: 'recent',
             count: sanitized.length,
             tweets: sanitized
           };

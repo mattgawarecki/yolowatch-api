@@ -1,28 +1,16 @@
 var environmentConfigs = {
   development: {
-    logger: {
-      level: 'silly'
-    },
-    db: {
-      path: 'mongodb://localhost/yolowatch'
-    },
-    server: {
-      port: 9002
-    },
+    logger_level: 'silly',
+    db_path: 'mongodb://localhost/yolowatch',
+    port: 9002,
     endpoints: {
       max_tweet_count: 20
     }
   },
   production: {
-    logger: {
-      level: 'info'
-    },
-    db: {
-      path: 'mongodb://localhost/yolowatch'
-    },
-    server: {
-      port: 9002
-    },
+    logger_level: 'info',
+    db_path: 'mongodb://localhost/yolowatch',
+    port: 9002,
     endpoints: {
       max_tweet_count: 20
     }

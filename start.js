@@ -1,13 +1,13 @@
 var config = require('./config');
 var logger = require('winston');
-logger.level = config.logger.level || 'info';
+logger.level = config.logger_level || 'info';
 
 logger.debug('Building data model.');
 
 var MongoClient = require('mongodb').MongoClient;
 require('./model')({
   client: MongoClient,
-  path: config.db.path
+  path: config.db_path
 }, function(err, model) {
   if (err) throw err;
 
@@ -24,7 +24,7 @@ function startServer(model) {
     endpoints: config.endpoints
   });
 
-  var port = config.server.port || 8081;
+  var port = config.port || 8081;
   var server = app.listen(port, 'localhost', function() {
     var host = server.address().address;
     var port = server.address().port;
