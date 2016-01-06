@@ -2,7 +2,7 @@
   "name": "yolowatch-api",
   "version": "1.0.0",
   "private": true,
-  "description": "A RESTful API for analysis and retrieval of information from the YoloWatch database",
+  "description": "A RESTful API for analysis and retrieval of information from the yolowatch-worker project",
   "keywords": [
     "yolo",
     "twitter",
